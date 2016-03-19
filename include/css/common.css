@@ -1,0 +1,108 @@
+/***************
+영역만 나눠놓고 나중에 파일을 나누자
+
+reset.css 포함 ;
+****************/
+
+@import url(reset.css);
+
+
+/*
+공통
+*/
+
+
+html,body{
+	height: 100%;
+	margin:0;
+}
+
+
+.main{
+	height: 100%;
+	background-color: #dedede;
+}
+
+.page{
+	margin-left: auto;
+	margin-right: auto;
+	width:1080px;
+	height: 100%;
+
+	background-color: black;
+
+}
+.side{
+	float:left;
+	width: 200px;
+	height: 100%;
+	background-color: red;
+
+}
+.content{
+	float: left;
+	width: 850px;
+	height: 100%;
+	background-color: blue;
+}
+
+.container1080{
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dark{
+	background-color: #2d3a45;
+	color:white;
+}
+.light{
+	background-color: #f3f4f7;
+	color:black;
+}
+
+
+/*
+navbar
+*/
+.mk-navbar{
+	width:100%;
+	height: 50px;
+	
+	display: table;
+	
+	line-height: 1.4;
+
+}
+
+
+.mk-navbar ul{
+	line-height: 50px;
+}
+.mk-navbar ul li{
+	float:left;
+	display: block;
+}
+
+.mk-navbar ul li >a{
+	padding: 10px 15px;
+	color:white;
+	text-decoration: none;
+
+}
+
+
+
+
+/*
+badge.css
+*/
+
+.badge-case{
+	width:90%;
+}
+
+.darkgrey{
+	background-color: #dedede;
+}
+
