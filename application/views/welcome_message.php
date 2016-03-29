@@ -1,7 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require '/application/libraries/Instagram.php';
 
+/*
+TODO: api callback 을 success.php로 채우기.
+TODO: 받아온 코드를 $data = $instagram->getOAuthToken($code);
+ $username = $data->user->username;
+    // store user access token
+    $instagram->setAccessToken($data);
+    // now you have access to all authenticated user methods
+    $result = $instagram->getUserMedia();
+
+TODO:vardump로 다 뿌려보고
+TODO:call 함수로 curl통신을 해서 데이터 가져오기.
+TODO:가져온 데이터를 foreach 써서 img 폼에 맞춰서 뿌려주기.
+
+
+*/
+$instagram = new Instagram(array(
+	'apiKey'=>'db4f35cd0f1042629eb500ca10af6810',
+	'apiSecret'=>'2fc0e4f024464cdb9555dea61e422a70',
+	'apiCallback'=>
+));
 ?>
 
 
@@ -17,6 +38,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="/include/css/prism.css">
 </head>
 <body>
+
+<a href="https://api.instagram.com/oauth/authorize?client_id=db4f35cd0f1042629eb500ca10af6810&redirect_uri=http://www.lionlove.me&scope=basic+likes&response_type=code">
+	
+	인스타그램 로그인
+</a>
+
+<?php 
+
+
+if(isset($_GET['code']) === true){
+	$code = $_GET['code'];
+	var_dump($code);
+	$
+	session_start();
+	$_SESSSION['user_token'] = $code;
+
+	$
+}
+	
+?>
 	
 <pre><code class="language-markup">
 	<xmp>
