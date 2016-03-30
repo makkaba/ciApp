@@ -33,9 +33,24 @@ $instagram = new Instagram(array(
 	'apiCallback'=>'http://www.lionlove.me'
 ));
 
+// receive OAuth code parameter
+$code = $_GET['code'];
+// check whether the user has granted access
+if (isset($code)) {
+    // receive OAuth token object
+    $data = $instagram->getOAuthToken($code);
+    $username = $data->user->username;
+    // store user access token
+    $instagram->setAccessToken($data);
+    // now you have access to all authenticated user methods
+    $result = $instagram->getUserMedia();
+} else {
+    // check whether an error occurred
+    if (isset($_GET['error'])) {
+        echo 'An error occurred: ' . $_GET['error_description'];
+    }
+}
 
-// create login URL
-$loginUrl = $instagram->getLoginUrl();
 
 ?>
 
@@ -121,23 +136,7 @@ $loginUrl = $instagram->getLoginUrl();
         </footer>
     </div>
 </div>
-<!-- javascript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // rollover effect
-        $('li').hover(
-            function () {
-                var $media = $(this).find('.media');
-                var height = $media.height();
-                $media.stop().animate({marginTop: -(height - 82)}, 1000);
-            }, function () {
-                var $media = $(this).find('.media');
-                $media.stop().animate({marginTop: '0px'}, 1000);
-            }
-        );
-    });
-</script>
+
 
 
 
@@ -147,21 +146,7 @@ $loginUrl = $instagram->getLoginUrl();
 	인스타그램 로그인
 </a>
 
-<?php 
 
-
-if(isset($_GET['code']) === true){
-	$code = $_GET['code'];
-	// receive OAuth token object
-    $data = $instagram->getOAuthToken($code);
-    $username = $data->user->username;
-    // store user access token
-    $instagram->setAccessToken($data);
-    // now you have access to all authenticated user methods
-    $result = $instagram->getUserMedia();
-}
-	
-?>
 	
 <pre><code class="language-markup">
 	<xmp>
@@ -207,5 +192,21 @@ $endpoint = 'https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.29435
 <footer>Jeff</footer>
 
 <script src="/include/js/prism.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // rollover effect
+        $('li').hover(
+            function () {
+                var $media = $(this).find('.media');
+                var height = $media.height();
+                $media.stop().animate({marginTop: -(height - 82)}, 1000);
+            }, function () {
+                var $media = $(this).find('.media');
+                $media.stop().animate({marginTop: '0px'}, 1000);
+            }
+        );
+    });
+</script>
 </body>
 </html>
