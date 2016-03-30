@@ -30,7 +30,7 @@ TODO:가져온 데이터를 foreach 써서 img 폼에 맞춰서 뿌려주기.
 $instagram = new Instagram(array(
 	'apiKey'=>'db4f35cd0f1042629eb500ca10af6810',
 	'apiSecret'=>'2fc0e4f024464cdb9555dea61e422a70',
-	'apiCallback'=>'http://lionlove.me/'
+	'apiCallback'=>'http://www.lionlove.me'
 ));
 
 
