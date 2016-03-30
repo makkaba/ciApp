@@ -27,11 +27,16 @@ TODO:가져온 데이터를 foreach 써서 img 폼에 맞춰서 뿌려주기.
 
 
 */
-// $instagram = new Instagram(array(
-// 	'apiKey'=>'db4f35cd0f1042629eb500ca10af6810',
-// 	'apiSecret'=>'2fc0e4f024464cdb9555dea61e422a70',
-// 	'apiCallback'=>''
-// ));
+$instagram = new Instagram(array(
+	'apiKey'=>'db4f35cd0f1042629eb500ca10af6810',
+	'apiSecret'=>'2fc0e4f024464cdb9555dea61e422a70',
+	'apiCallback'=>'http://lionlove.me/'
+));
+
+
+// create login URL
+$loginUrl = $instagram->getLoginUrl();
+
 ?>
 
 
@@ -47,6 +52,29 @@ TODO:가져온 데이터를 foreach 써서 img 폼에 맞춰서 뿌려주기.
 	<link rel="stylesheet" href="/include/css/prism.css">
 </head>
 <body>
+
+<div class="container">
+    <header class="clearfix">
+        <h1>Instagram <span>display your photo stream</span></h1>
+    </header>
+    <div class="main">
+        <ul class="grid">
+            <li><img src="assets/instagram-big.png" alt="Instagram logo"></li>
+            <li>
+                <a class="login" href="<?php echo $loginUrl ?>">» Login with Instagram</a>
+                <h4>Use your Instagram account to login.</h4>
+            </li>
+        </ul>
+        <!-- GitHub project -->
+        <footer>
+            <p>created by <a href="https://github.com/cosenary/Instagram-PHP-API">cosenary's Instagram class</a>,
+                available on GitHub</p>
+        </footer>
+    </div>
+</div>
+
+
+
 
 <a href="https://api.instagram.com/oauth/authorize?client_id=db4f35cd0f1042629eb500ca10af6810&redirect_uri=http://www.lionlove.me&scope=basic+likes&response_type=code">
 	
