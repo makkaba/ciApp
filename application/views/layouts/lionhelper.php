@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>jeff</title>
 	<link rel="stylesheet" href="/include/css/common.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js">
+	</script>
+	<!-- todo:앵귤러 컨트롤러로 쓸 js를 포함 -->
 </head>
 <body>
 	
@@ -18,8 +21,7 @@
 
     <script src="/include/js/jquery-2.2.2.min.js"></script>
     <script src="/include/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js">
-	</script>
+
     <?php foreach($js as $jsFile): ?>
         <script src="/include/js/<?php echo $jsFile; ?>"></script>
     <?php endforeach;?>

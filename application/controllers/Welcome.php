@@ -8,7 +8,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//$this->load->view('welcome_message');
-		$js = [];
+		$js = array();
 		$js[] = 'helplion/helplion.js';
 
 		$data = array('subview' => 'pages/lionhelper', 'js'=>$js);
