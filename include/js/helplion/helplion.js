@@ -1,4 +1,6 @@
-$('#first').click(function(){
 
-	alert("success");
+  $("#first").click(function(){
+    $.ajax({url: "/getSourcecode", success: function(result){
+        alert("it works");
+    }});
 });

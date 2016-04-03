@@ -22,12 +22,3 @@ hello world, this is lion helper.
 <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
 </div>
 <!-- 시티 설치 코드 끝 -->
-
-<script>
-  
-  $("#first").click(function(){
-    $.ajax({url: "/getSourcecode", success: function(result){
-        alert("it works");
-    }});
-});
-</script>
