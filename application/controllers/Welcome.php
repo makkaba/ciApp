@@ -14,4 +14,11 @@ class Welcome extends CI_Controller {
 		$data = array('subview' => 'pages/lionhelper', 'js'=>$js);
 		$this->load->view('layouts/lionhelper', $data);
 	}
+
+	public function getSourcecode(){
+
+		$this->load->model('Helpermodel');
+		$data['query'] = $this->Helpermodel->get_all_code();
+		return $data;
+	}
 }
