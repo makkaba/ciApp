@@ -1,11 +1,17 @@
 
 var count = 0;
 
-  $("#first").click(function(){
+
+  //TODO: 실제 서버에 올릴때는 index.php주소 지워야함
+  $(".btn-viewcode").click(function(){
+    l('init click');
+
+    var button_sequence = $(this).attr("data-button");
+    console.log(button_sequence);
     $.ajax({
     	type: "POST",
     	url: "/index.php/Ajax/getOneCode/",
-      data: { sequence : "1"},
+      data: { sequence : button_sequence},
     	success: function(result){
         
         l('success');
