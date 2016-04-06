@@ -5,8 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>jeff</title>
 	<link rel="stylesheet" href="/include/css/common.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js">
-	</script>
+
+	<?php foreach ($css as $cssFile): ?> 
+		<link rel="stylesheet" href="/include/css/<?php echo $cssFile; ?>">
+	<?php endforeach?>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 	<!-- todo:앵귤러 컨트롤러로 쓸 js를 포함 -->
 </head>
 <body>

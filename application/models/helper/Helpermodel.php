@@ -42,4 +42,10 @@ class Helpermodel extends CI_Model {
 
     }
 
+    function get_one_code($sequence){
+        $this->db->where('sequence', $sequence);
+        $query = $this->db->get('code');
+
+        return $query->row();
+    }
 }

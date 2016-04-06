@@ -1,8 +1,37 @@
-hello world, this is lion helper.
+
 
 
 <button id = "first">첫째 주 코드</button>
 <button id = "second">둘째 주 코드</button>
+
+<div class="container">
+  <row>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="source-container">
+        
+
+      </div>
+
+
+
+    </div>
+    <div class="col-md-1">
+      
+      <div id="log"></div>
+    </div>
+  </row>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+  //Prism.highlightAll();
+</script>
+
 
 <!-- 라이브리 시티 설치 코드 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC8yNjAzMi8yNjI0">

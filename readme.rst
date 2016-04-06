@@ -68,3 +68,14 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+
+***************
+helplion에서 어려웠던 점
+***************
+
+syntax highlighter로 prism 라이브러리를 사용하였는데 
+ajax통신으로 db에서 html 마크업 코드를 가져와서 뿌려줄 때
+Dom 엘리먼트로 이식이 안되어서
+xmp태그 사용 예정.
