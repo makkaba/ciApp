@@ -27,4 +27,24 @@ class Welcome extends CI_Controller {
 		$data = $this->Helpermodel->get_all_code();
 		var_dump($data);
 	}
+
+	public function admin(){
+
+		$mode = $this->input->get('mode', TRUE);
+		if($mode != "makkaba"){
+			$this->load->helper('url');
+			redirect('/','refresh');
+
+		}else{
+
+			$this->load->view('pages/admin');
+
+
+
+
+		}
+			
+
+
+	}
 }

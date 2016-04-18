@@ -14,20 +14,20 @@
 		<section class="mk-navbar dark">
 			<div class="container1080">
 				<ul>
-					<li><a href="">챌린지</a></li>
-					<li><a href="">챌린지</a></li>	
+					<li><a href="/">홈</a></li>
+						
 				</ul>
 				
 			</div>
 		</section>
-		<section class="mk-navbar light">
+		<!-- <section class="mk-navbar light">
 			<div class="container1080">
 				<ul>
 					<li><a href="">챌린지</a></li>
 					<li><a href="">챌린지</a></li>	
 				</ul>
 			</div>
-		</section>
+		</section> -->
 	</header>
 	<div class="main">
 		<?php $this->load->view($subview); ?>

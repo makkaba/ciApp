@@ -48,4 +48,18 @@ class Helpermodel extends CI_Model {
 
         return $query->row();
     }
+
+    function save_code($postdata){
+        
+
+        
+        $this->db->set('date', 'NOW()', FALSE);
+        //var_dump($postdata);
+        //$timeStamp    = time();
+        //$data = array('content' => $code, 'date' => $timeStamp );
+        $this->db->insert('code', $postdata);
+
+
+    }
+
 }

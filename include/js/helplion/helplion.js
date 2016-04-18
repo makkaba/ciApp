@@ -80,7 +80,7 @@ var count = 0;
     var html = "<div class='language-markup'><pre><code><xmp>";
     html += ParsedSource.content;
     html += "</xmp></code></pre></div>";
-    $('.source-container').append(html);
+    $('.source-container').html(html);
     l('after append');
 
     Prism.highlightAll();
